@@ -1,0 +1,12 @@
+:host {
+  display: block;
+}
+
+img {
+  height: 13px;
+  width: 15px;
+}
+
+.card-num {
+  display: inline-flex;
+}
