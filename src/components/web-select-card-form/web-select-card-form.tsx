@@ -54,11 +54,11 @@ const options: RadioProps[] = [
     ]
 
 @Component({
-  tag: 'web-form',
-  styleUrl: 'web-form.css',
+  tag: 'web-select-card-form',
+  styleUrl: 'web-select-card-form.css',
   shadow: true,
 })
-export class WebForm {
+export class WebSelectCardForm {
 
   render() {
     return (

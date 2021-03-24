@@ -33,10 +33,12 @@ export namespace Components {
         "options": RadioProps[];
         "slotLabel": boolean;
     }
-    interface WebForm {
-    }
     interface WebRadioInput {
         "webRadioProps": RadioProps;
+    }
+    interface WebSelectCardForm {
+    }
+    interface WebSelectTypeForm {
     }
 }
 declare global {
@@ -58,24 +60,31 @@ declare global {
         prototype: HTMLWebFieldsetElement;
         new (): HTMLWebFieldsetElement;
     };
-    interface HTMLWebFormElement extends Components.WebForm, HTMLStencilElement {
-    }
-    var HTMLWebFormElement: {
-        prototype: HTMLWebFormElement;
-        new (): HTMLWebFormElement;
-    };
     interface HTMLWebRadioInputElement extends Components.WebRadioInput, HTMLStencilElement {
     }
     var HTMLWebRadioInputElement: {
         prototype: HTMLWebRadioInputElement;
         new (): HTMLWebRadioInputElement;
     };
+    interface HTMLWebSelectCardFormElement extends Components.WebSelectCardForm, HTMLStencilElement {
+    }
+    var HTMLWebSelectCardFormElement: {
+        prototype: HTMLWebSelectCardFormElement;
+        new (): HTMLWebSelectCardFormElement;
+    };
+    interface HTMLWebSelectTypeFormElement extends Components.WebSelectTypeForm, HTMLStencilElement {
+    }
+    var HTMLWebSelectTypeFormElement: {
+        prototype: HTMLWebSelectTypeFormElement;
+        new (): HTMLWebSelectTypeFormElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "web-card-summary": HTMLWebCardSummaryElement;
         "web-fieldset": HTMLWebFieldsetElement;
-        "web-form": HTMLWebFormElement;
         "web-radio-input": HTMLWebRadioInputElement;
+        "web-select-card-form": HTMLWebSelectCardFormElement;
+        "web-select-type-form": HTMLWebSelectTypeFormElement;
     }
 }
 declare namespace LocalJSX {
@@ -102,17 +111,20 @@ declare namespace LocalJSX {
         "options": RadioProps[];
         "slotLabel": boolean;
     }
-    interface WebForm {
-    }
     interface WebRadioInput {
         "webRadioProps": RadioProps;
+    }
+    interface WebSelectCardForm {
+    }
+    interface WebSelectTypeForm {
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
         "web-card-summary": WebCardSummary;
         "web-fieldset": WebFieldset;
-        "web-form": WebForm;
         "web-radio-input": WebRadioInput;
+        "web-select-card-form": WebSelectCardForm;
+        "web-select-type-form": WebSelectTypeForm;
     }
 }
 export { LocalJSX as JSX };
@@ -122,8 +134,9 @@ declare module "@stencil/core" {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "web-card-summary": LocalJSX.WebCardSummary & JSXBase.HTMLAttributes<HTMLWebCardSummaryElement>;
             "web-fieldset": LocalJSX.WebFieldset & JSXBase.HTMLAttributes<HTMLWebFieldsetElement>;
-            "web-form": LocalJSX.WebForm & JSXBase.HTMLAttributes<HTMLWebFormElement>;
             "web-radio-input": LocalJSX.WebRadioInput & JSXBase.HTMLAttributes<HTMLWebRadioInputElement>;
+            "web-select-card-form": LocalJSX.WebSelectCardForm & JSXBase.HTMLAttributes<HTMLWebSelectCardFormElement>;
+            "web-select-type-form": LocalJSX.WebSelectTypeForm & JSXBase.HTMLAttributes<HTMLWebSelectTypeFormElement>;
         }
     }
 }

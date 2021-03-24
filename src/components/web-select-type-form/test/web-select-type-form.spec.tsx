@@ -1,18 +1,18 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { WebForm } from '../web-form';
+import { WebSelectTypeForm } from '../web-select-type-form';
 
-describe('web-form', () => {
+describe('web-select-type-form', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [WebForm],
-      html: `<web-form></web-form>`,
+      components: [WebSelectTypeForm],
+      html: `<web-select-type-form></web-select-type-form>`,
     });
     expect(page.root).toEqualHtml(`
-      <web-form>
+      <web-select-type-form>
         <mock:shadow-root>
           <slot></slot>
         </mock:shadow-root>
-      </web-form>
+      </web-select-type-form>
     `);
   });
 });
